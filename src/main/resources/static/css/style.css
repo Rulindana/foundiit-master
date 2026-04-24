@@ -1,0 +1,123 @@
+/* FoundIt+ Premium Design Tokens */
+:root {
+    --primary-color: #4361ee;
+    --primary-hover: #3a56cf;
+    --secondary-color: #7209b7;
+    --accent-color: #4cc9f0;
+    --success-color: #4cc9f0;
+    --text-dark: #2b2d42;
+    --text-muted: #8d99ae;
+    --bg-light: #f8f9fa;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(67, 97, 238, 0.95) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #4361ee 0%, #7209b7 100%);
+    border-radius: 0 0 50px 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.animated-badge {
+    animation: pulse 3s infinite ease-in-out;
+}
+
+/* Cards */
+.item-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+}
+
+.category-card {
+    transition: all 0.2s ease;
+}
+
+.category-card:hover {
+    background-color: var(--primary-color) !important;
+    transform: scale(1.05);
+}
+
+.category-card:hover i, 
+.category-card:hover h6 {
+    color: white !important;
+}
+
+/* Admin Elements */
+.admin-action-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.admin-action-card:hover {
+    background: var(--primary-color) !important;
+}
+
+.admin-action-card:hover h5, 
+.admin-action-card:hover p {
+    color: white !important;
+}
+
+.admin-action-card:hover .bg-opacity-10 {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+}
+
+/* Forms */
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.1);
+    border-color: var(--primary-color);
+}
+
+.border-dashed {
+    border-style: dashed !important;
+}
+
+/* Custom Badges */
+.badge {
+    font-weight: 600;
+}
+
+/* Notification Card */
+.notification-card {
+    transition: background 0.2s ease;
+}
+
+.notification-card:hover {
+    background-color: #fff !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05) !important;
+}
